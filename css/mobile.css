@@ -41,7 +41,7 @@ body {
     position: fixed;
     top: -100%; /* Modal empieza fuera de la vista (parte superior) */
     left: 0;
-    width: 55%; /* Ancho completo si es necesario */
+    width: 100%; /* Ancho completo si es necesario */
     height: 100%;
     background: rgba(255, 255, 255, 0.95);
     z-index: 1000;
