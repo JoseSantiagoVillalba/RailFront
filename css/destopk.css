@@ -1,0 +1,65 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Esto asegura que los elementos se distribuyan correctamente */
+    padding: 10px 20px;
+    background-color: #a9a9a9;
+    width: 100%; /* Asegúrate de que ocupa todo el ancho */
+}
+
+
+
+
+
+/* Ocultar el botón hamburguesa */
+.hamburger {
+    display: none;
+  }
+  
+
+
+  /* Mostrar menú de desktop */
+  .desktop-menu {
+    display: flex;
+    justify-content: space-around;
+    padding-right: 5rem;
+  }
+  
+  .desktop-menu a {
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+
+.apareceizquierda{
+    color: red;
+}
+
+
+.moving-divs-section {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los divs ocupen varias filas */
+    justify-content: space-between; /* Distribuye los elementos en filas */
+}
+
+/* .moving-div y .moving-div2 en la primera fila */
+.works, .moving-div2 {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 20px; /* Espacio inferior entre las filas */
+}
+
+.works a {
+  font-size: 56px;
+  text-decoration: underline;
+  margin: 2rem;
+}
+
+
+/* .moving-div3 y .moving-div4 en la segunda fila */
+.moving-div3, .moving-div4 {
+    width: 48%; /* Ocupan el 48% del ancho cada uno en desktop */
+}

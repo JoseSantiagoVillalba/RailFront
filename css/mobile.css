@@ -1,0 +1,485 @@
+
+body {
+    margin: 0;
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+}
+
+.navbar{
+    height: 5rem;
+    background-color: #bfbfbf;
+}
+
+.desktop-menu {
+    display: none;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Esto asegura que los elementos se distribuyan correctamente */
+    padding: 10px 20px;
+    background-color: #a9a9a9;
+    width: 90%; /* Asegúrate de que ocupa todo el ancho */
+}
+
+.logorail{
+    font-size: 1.8rem;
+}
+
+/* Botón hamburguesa */
+.hamburger {
+    font-size: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+/* Estilos del modal */
+.modal {
+    position: fixed;
+    top: -100%; /* Modal empieza fuera de la vista (parte superior) */
+    left: 0;
+    width: 55%; /* Ancho completo si es necesario */
+    height: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    z-index: 1000;
+    transition: top 0.5s ease; /* Transición suave para top */
+}
+
+/* Estado cuando el modal está visible */
+.modal:target {
+    top: 0; /* El modal baja para entrar en la vista */
+}
+
+.close-modal {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    font-size: 36px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    margin-top: 100px;
+}
+
+.modal ul li {
+    margin-bottom: 20px;
+    padding-bottom: 1rem;
+    padding-top: 1.5rem;
+    border-bottom: solid 1px black;
+}
+
+.modal ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 24px;
+    margin-left: 1rem;
+}
+
+#contactBtn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    background-color: blue;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#contactBtn:hover {
+    background-color: rgb(74, 74, 247);
+}
+
+#contactBtn2 {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    background-color: blue;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-left: 20px;
+}
+
+#contactBtn2:hover {
+    background-color: rgb(74, 74, 247);
+}
+
+
+
+
+.section-1, .section-2 {
+    opacity: 0;
+    font-family: "Inria Sans", sans-serif;
+}
+
+
+.section-1 {
+    height: 500px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(/assets/img/background-section1.jpg);
+    background-size: cover;
+    opacity: 0;
+    animation: section-1 1.5s forwards;
+    background-color: rgba(0, 0, 0, 0.866);
+}
+
+
+.texto-section-1{
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+}
+.titulo{
+margin:0 20px;
+padding-top: 10px;
+color: #fff;
+padding-bottom: 20px;
+}
+
+
+@keyframes section-1 {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.section-2 {
+    height: 870px;
+    background-size: cover;
+    opacity: 0;
+    animation: section-2 1.5s forwards;
+}
+
+
+.texto-section-2{
+    margin: 0 20px;
+}
+
+.texto-section-2 p{
+    padding-bottom: 30px;
+}
+
+.titulo-section-2{
+    color: #f62020;
+    padding-bottom: 20px;
+}
+
+@keyframes section-2 {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.section-3{
+    margin-bottom: 20px;
+}
+
+.titulo-section-4{
+    margin: 20px;
+    color: red;
+}
+
+/* Estilos para el contenedor cuadrado */
+.gallery-square {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    grid-template-rows: repeat(3, 1fr); /* 3 filas */
+    gap: 5px;
+    width: 100%;
+    max-width: 90%; /* Ajusta el tamaño según necesites */
+    margin: auto; /* Centrado */
+  }
+  
+  /* Estilos para las imágenes individuales */
+  .gallery-square img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border-radius: 5px; /* Opcional: bordes redondeados */
+  }
+  
+  /* Distribución personalizada para el layout */
+  .gallery-square img:nth-child(1) {
+    grid-column: 1 / 3; /* Ocupa 2 columnas */
+    grid-row: 1 / 2;    /* Ocupa 1 fila */
+  }
+  
+  .gallery-square img:nth-child(2) {
+    grid-column: 3 / 4; /* Ocupa 1 columna */
+    grid-row: 1 / 3;    /* Ocupa 2 filas */
+  }
+  
+  .gallery-square img:nth-child(3) {
+    grid-column: 1 / 2; /* Ocupa 1 columna */
+    grid-row: 2 / 4;    /* Ocupa 2 filas */
+  }
+  
+  .gallery-square img:nth-child(4) {
+    grid-column: 2 / 4; /* Ocupa 2 columnas */
+    grid-row: 3 / 4;    /* Ocupa 1 fila */
+  }
+  
+  .gallery-square img:nth-child(5) {
+    grid-column: 2 / 3; /* Ocupa 1 columna */
+    grid-row: 2 / 3;    /* Ocupa 1 fila */
+  }
+  
+  .gallery-square img:nth-child(6) {
+    grid-column: 3 / 4; /* Ocupa 1 columna */
+    grid-row: 3 / 4;    /* Ocupa 1 fila */
+  }
+  
+  /* Efecto hover */
+  .gallery-square img:hover {
+    transform: scale(1.05);
+  }
+  
+
+
+
+
+.imgworks {
+    text-align: center;
+}
+
+@keyframes section-1 {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.titulo-section-3{
+position: absolute;
+padding: 0 20px;
+color: #fff;
+z-index: 2;
+
+
+
+}
+.imgworks  img{
+    width: 90%;
+    height: 50%;
+    opacity: 1; /* Opacidad completa */
+    transition: opacity 0.4s ease; /* Transición suave */
+}
+
+.imgworks img:hover{
+        opacity: 0.8;
+}
+
+
+.works {
+    width: 360px;
+    height: 260px;
+    background-image: url(/assets/img/works.jpg);
+    background-size: cover;
+    opacity: 0;
+    transform: translateX(-100%);
+    color: #fff;
+    position: relative; /* Necesario para que ::before esté dentro del contenedor */
+    overflow: hidden;   /* Para evitar que el ::before sobresalga */
+}
+
+.works::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Color negro con 50% de transparencia */
+    z-index: 1; /* Asegura que la capa esté sobre la imagen pero debajo del contenido */
+}
+
+.works a {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    z-index: 2; /* Asegura que el enlace esté por encima de la capa oscura */
+}
+
+.works.visible {
+    opacity: 1;
+    transform: translateX(0);
+    transition: transform 1.5s ease-out, opacity 1.5s ease-out;
+}
+
+.moving-div2 {
+    height: auto;
+    color: red;
+    opacity: 0;
+    transform: translateX(100%);
+    margin: 20px;
+    font-family: "Inria Sans", sans-serif;
+}
+
+.moving-div2.visible2 {
+    opacity: 1;
+    transform: translateY(0);
+    transition: transform 2s ease-out, opacity 2s ease-out;
+}
+
+.moving-div3 {
+    width: 150px;
+    height: 100px;
+    background-color: lightblue;
+    opacity: 0;
+    transform: translateX(-100%);
+    margin: 40px;
+}
+
+.moving-div3.visible3 {
+    opacity: 1;
+    transform: translateY(0);
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.moving-div4 {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    opacity: 0;
+    transform: translateX(100%);
+    margin: 40px;
+}
+
+.moving-div4.visible4 {
+    opacity: 1;
+    transform: translateY(0);
+    transition: transform 1.2s ease-out, opacity 1.2s ease-out;
+}
+
+/* Estilo para el fondo parallax */
+.parallax {
+    background-image: url('/assets/img/pexels-jayanth-muppaneni-1883885743-28867161.jpg'); /* Imagen de fondo */
+    height: 500px; /* Altura del contenedor */
+    background-attachment: fixed; /* Hace que el fondo se mueva a una velocidad diferente */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Sección de contenido normal */
+.contenido {
+    height: 400px; /* Altura del contenido */
+    background-color: #fff; /* Color de fondo del contenido */
+    text-align: center;
+    padding: 100px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.contenido h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.contenido p {
+    font-size: 1.2em;
+}
+
+.variasimgs{
+    display: flex;
+    height: 430px;
+    width: auto;
+}
+
+.variasimgs img{
+    width: 0;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+
+
+.variasimgs img:hover{
+cursor: crosshair;
+width: 150px;
+opacity: 1;
+filter: contrast(120%);
+}
+
+.titulo-footer{
+    margin-left: 40px;
+}
+
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+form {
+    width: 280px;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea, select {
+    width: 94%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: rgb(80, 80, 255);
+}
+
+.boton-enviar-form{
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    background-color: blue;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+
