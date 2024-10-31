@@ -5,7 +5,7 @@ body {
 }
 
 .navbar{
-    height: 5rem;
+    height: 3.5rem;
     background-color: #bfbfbf;
 }
 
@@ -18,12 +18,15 @@ body {
     align-items: center;
     justify-content: space-between; /* Esto asegura que los elementos se distribuyan correctamente */
     padding: 10px 20px;
-    background-color: #a9a9a9;
+    background-color: #171941ee;
     width: 90%; /* Asegúrate de que ocupa todo el ancho */
+    z-index: 1000; 
+    position: fixed;
 }
 
 .logorail{
     font-size: 1.8rem;
+    color: white;
 }
 
 /* Botón hamburguesa */
@@ -33,7 +36,8 @@ body {
     border: none;
     cursor: pointer;
     text-decoration: none;
-    color: black;
+    color: white;
+    padding-right: 2rem;
 }
 
 /* Estilos del modal */
@@ -130,7 +134,7 @@ body {
 
 
 .section-1 {
-    height: 500px;
+    height: 550px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(/assets/img/background-section1.jpg);
     background-size: cover;
     opacity: 0;
@@ -168,21 +172,25 @@ padding-bottom: 20px;
     background-size: cover;
     opacity: 0;
     animation: section-2 1.5s forwards;
+
 }
 
 
-.texto-section-2{
+
+
+.servicio-1{
+    color:black;
     margin: 0 20px;
 }
 
-.texto-section-2 p{
+.servicio-1 p{
     padding-bottom: 30px;
 }
 
 .titulo-section-2{
-    color: #f62020;
-    padding-bottom: 20px;
+    padding: 20px;
 }
+
 
 @keyframes section-2 {
     0% {
@@ -301,7 +309,7 @@ z-index: 2;
 
 
 .works {
-    width: 360px;
+    width: auto;
     height: 260px;
     background-image: url(/assets/img/works.jpg);
     background-size: cover;
